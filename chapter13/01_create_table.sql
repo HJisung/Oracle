@@ -1,4 +1,6 @@
-CREATE OR REPLACE PROCEDURE ch13_exam_crt_table_proc(pv_src_table IN VARCHAR2) IS
+CREATE OR REPLACE PROCEDURE ch13_exam_crt_table_proc(pv_src_table IN VARCHAR2)
+AUTHID CURRENT_USER
+IS
   v_source VARCHAR2(30) := DBMS_ASSERT.SIMPLE_SQL_NAME(UPPER(pv_src_table));
   v_target VARCHAR2(30);
 BEGIN
